@@ -17,3 +17,8 @@ export const setVisibilityFilter = (filter) => ({
   filter
 }) 
 
+export const removeTodo = (id) => ({
+  type: Constants.REMOVE_TODO,
+  id
+})
+

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import {createStore} from 'redux';
 
-import Footer from './Footer';
+import FooterContainer from '../containers/FooterContainer';
 import AddTodo from '../containers/AddTodo';
 import VisibleTodoList from '../containers/VisibleTodoList';
 
@@ -13,7 +13,7 @@ const App = () => (
   <div>
     <AddTodo />
     <VisibleTodoList />
-    <Footer/>
+    <FooterContainer/>
   </div>
 )
 

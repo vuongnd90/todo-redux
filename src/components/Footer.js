@@ -2,8 +2,10 @@ import React from 'react';
 import FilterLink from '../containers/FilterLink';
 import Constants from '../constants/Constants';
 
-const Footer = () => (
-    <p>
+const Footer = ({total}) => (
+    <div>
+        <p>{'Total:' + total}</p>
+        <p>
         Show: 
         {'    '}
         <FilterLink filter={Constants.SHOW_ALL}>
@@ -18,6 +20,7 @@ const Footer = () => (
             Completed
         </FilterLink>
     </p>
+    </div>    
 )
 
 export default Footer;
