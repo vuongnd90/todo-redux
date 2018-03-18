@@ -8,6 +8,10 @@ const Constants = {
     SHOW_ALL: 'SHOW_ALL',
 
     SET_VISIBILITY_FILTER: 'SET_VISIBILITY_FILTER',
+
+    FETCH_ALL_REQUEST: 'Characters.FETCH_ALL_REQUEST',
+    FETCH_ALL_SUCCESS: 'Characters.FETCH_ALL_SUCCESS',
+    FETCH_ALL_FAILURE: 'Characters.FETCH_ALL_FAILURE',
 }
 
 export default Constants;
