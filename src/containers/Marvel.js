@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import CharactersList from '../components/CharactersList/CharactersList';
-import { getCharacters as getCharactersFromAPI } from '../actions';
+import { getCharacters as getCharactersFromAPI, fetchCharacters } from '../actions';
 import { getCharacters, getPaginationParams } from './SelectorMarvel';
 
 const mapStateToProps = (state) => ({
@@ -11,7 +11,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispath) => ({
-  getCharactersFromAPI: offset => dispath(getCharactersFromAPI(offset))
+  getCharactersFromAPI: offset => dispath(fetchCharacters(offset)) 
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(CharactersList);

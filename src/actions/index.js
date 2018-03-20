@@ -23,29 +23,43 @@ export const removeTodo = (id) => ({
   id
 })
 
-export const getCharacters = (offset=null) => {
-  return (dispatch) => {
-    dispatch({
-      type: Constants.FETCH_ALL_REQUEST,
-    });
-    const query = offset ?
-        `https://gateway.marvel.com:443/v1/public/characters?offset=${offset}&limit=50&apikey=37c21e2f4f5552df9929fbac286b8a39`
-        :
-        'https://gateway.marvel.com:443/v1/public/characters?limit=50&apikey=37c21e2f4f5552df9929fbac286b8a39'
-      ;
-    axios.get(query)
-      .then((response) => {
-        dispatch({
-          type: Constants.FETCH_ALL_SUCCESS,
-          payload: response.data,
-        });
-      })
-      .catch((error) => {
-        dispatch({
-          type: Constants.FETCH_ALL_FAILURE,
-          payload: error,
-        });
-      });
-  }  
-}
+export const fetchCharacters = (offset=null) => ({
+  type: Constants.FETCH_CHARACTERS,
+  offset,
+})
+
+export const fetchingData = () => ({
+  type: Constants.FETCH_ALL_REQUEST,
+})
+
+export const fetchDataOK = (data) => ({
+  type: Constants.FETCH_ALL_SUCCESS,
+  payload: data,
+})
+
+// export const getCharacters = (offset=null) => {
+//   return (dispatch) => {
+//     dispatch({
+//       type: Constants.FETCH_ALL_REQUEST,
+//     });
+//     const query = offset ?
+//         `https://gateway.marvel.com:443/v1/public/characters?offset=${offset}&limit=50&apikey=37c21e2f4f5552df9929fbac286b8a39`
+//         :
+//         'https://gateway.marvel.com:443/v1/public/characters?limit=50&apikey=37c21e2f4f5552df9929fbac286b8a39'
+//       ;
+//     axios.get(query)
+//       .then((response) => {
+//         dispatch({
+//           type: Constants.FETCH_ALL_SUCCESS,
+//           payload: response.data,
+//         });
+//       })
+//       .catch((error) => {
+//         dispatch({
+//           type: Constants.FETCH_ALL_FAILURE,
+//           payload: error,
+//         });
+//       });
+//   }  
+// }
 

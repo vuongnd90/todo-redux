@@ -12,6 +12,8 @@ const Constants = {
     FETCH_ALL_REQUEST: 'Characters.FETCH_ALL_REQUEST',
     FETCH_ALL_SUCCESS: 'Characters.FETCH_ALL_SUCCESS',
     FETCH_ALL_FAILURE: 'Characters.FETCH_ALL_FAILURE',
+
+    FETCH_CHARACTERS: 'FETCH_CHARACTERS',
 }
 
 export default Constants;
